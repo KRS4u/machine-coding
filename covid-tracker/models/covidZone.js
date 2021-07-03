@@ -1,7 +1,12 @@
 class CovidZone {
+    #availableColours = {
+        GREEN: 'GREEN',
+        ORANGE: 'ORANGE',
+        RED: 'RED'
+    };
     #zondId;
     #numCovidCases = 0;
-    #zoneColour = 'GREEN';
+    #zoneColour = this.#availableColours.GREEN;
 
     constructor(zoneId) {
         if (!zoneId) {
@@ -11,11 +16,14 @@ class CovidZone {
     }
 
     #setZoneColour = () => {
-        if (this.#numCovidCases < 5) {
-            this.#zoneColour = 'ORANGE';
+        if (this.#numCovidCases === 0) {
+            this.#zoneColour = this.#availableColours.GREEN;
+        }
+        else if (this.#numCovidCases < 5) {
+            this.#zoneColour = this.#availableColours.ORANGE;
         }
         else {
-            this.#zoneColour = 'RED';
+            this.#zoneColour = this.#availableColours.RED;
         }
     }
 

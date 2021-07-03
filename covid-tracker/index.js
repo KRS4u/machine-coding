@@ -18,6 +18,16 @@ try {
     console.log(covidTracker.getZone(560037));
     console.log(covidTracker.uploadCovidResult('KRS', 'ABC6', false));
     console.log(covidTracker.getZone(560037));
+    console.log(covidTracker.uploadCovidResult('KRS', 'ABC6', false));
+    console.log(covidTracker.getZone(560037));
+    console.log(covidTracker.uploadCovidResult('KRS', 'ABC5', false));
+    console.log(covidTracker.getZone(560037));
+    console.log(covidTracker.uploadCovidResult('KRS', 'ABC4', false));
+    console.log(covidTracker.getZone(560037));
+    console.log(covidTracker.uploadCovidResult('KRS', 'ABC3', false));
+    console.log(covidTracker.uploadCovidResult('KRS', 'ABC2', false));
+    console.log(covidTracker.uploadCovidResult('KRS', 'ABC', false));
+    console.log(covidTracker.getZone(560037));
 } catch (err) {
     console.log(err.message);
 }
